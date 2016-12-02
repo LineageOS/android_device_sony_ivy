@@ -23,6 +23,7 @@ TARGET_USE_SDCLANG := true
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := E6533,E6553,ivy,ivy_dsds
+TARGET_BOARD_INFO_FILE ?= $(DEVICE_PATH)/board-info.txt
 
 # Boot image/kernel
 TARGET_KERNEL_CONFIG := kitakami_ivy_defconfig
@@ -54,6 +55,10 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 24763170816
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
+
+# Releasetools
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_ivy
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Wifi
 BOARD_WLAN_DEVICE           := bcmdhd
