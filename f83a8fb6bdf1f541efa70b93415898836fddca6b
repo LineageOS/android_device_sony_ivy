@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba3e81b7_f053a06a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2017-01-15T07:14:18Z",
+      "side": 1,
+      "message": "To add support for recovery, as that\u0027s the main goal here.",
+      "revId": "f83a8fb6bdf1f541efa70b93415898836fddca6b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba3e81b7_b04d18c7",
+        "filename": "include/init_sony/init_board_device.h",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2017-01-15T07:14:18Z",
+      "side": 1,
+      "message": "Not a fan of vibration to be honest, need to see how intense this is though before forming a strong opinion.",
+      "revId": "f83a8fb6bdf1f541efa70b93415898836fddca6b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
