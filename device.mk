@@ -139,6 +139,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wlan/bcmdhd.cal:system/etc/firmware/wlan/bcmdhd/bcmdhd.cal
 
+# FlipFlap
+PRODUCT_PACKAGES += \
+    FlipFlap
+
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
