@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a288981_d13b0637",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 9392
+      },
+      "writtenOn": "2017-02-03T19:47:38Z",
+      "side": 1,
+      "message": "You should probably specify the CAF branch/tag",
+      "range": {
+        "startLine": 7,
+        "startChar": 27,
+        "endLine": 7,
+        "endChar": 30
+      },
+      "revId": "013214aba4bd79c15b5a38b68ac2713368e5dea7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
