@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a2585a7_f025de0a",
+        "filename": "audio/audio_effects.conf",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 14719
+      },
+      "writtenOn": "2017-02-10T15:46:31Z",
+      "side": 0,
+      "message": "This one can be kept.",
+      "revId": "3f8cf718bc1fb0af7ec76c2f74150deb9e08963e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
