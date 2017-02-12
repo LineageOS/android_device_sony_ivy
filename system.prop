@@ -92,6 +92,10 @@ ro.qti.sensors.dpc=false
 ro.qti.sensors.pug=false
 ro.qc.sdk.sensors.gestures=true
 
+# Assertive Display
+ro.qcom.ad=1
+ro.qcom.ad.calib.data=/system/etc/ad_calib.cfg
+
 # Wifi
 wifi.interface=wlan0
 
