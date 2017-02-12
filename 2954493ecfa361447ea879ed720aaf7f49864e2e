@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a2585a7_f9502260",
+        "filename": "system.prop",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 14719
+      },
+      "writtenOn": "2017-02-12T14:36:24Z",
+      "side": 1,
+      "message": "These are not supported by LineageOS",
+      "revId": "2954493ecfa361447ea879ed720aaf7f49864e2e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
