@@ -74,6 +74,11 @@ persist.data.qmi.adb_logmask=0
 telephony.lteOnGsmDevice=1
 DEVICE_PROVISIONED=1
 
+#IMS
+# Added system property for ViLTE bad Video quality issue
+persist.ims.vcel_rtcp_report=5
+persist.ims.disableUserAgent=1
+
 # Sensors
 ro.qti.sensors.wu=true
 ro.qti.sensors.max_geomag_rotv=70
