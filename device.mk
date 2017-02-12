@@ -81,6 +81,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
+# Assertive Display
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/ad_calib.cfg:system/etc/ad_calib.cfg
+
 # NFC config
 PRODUCT_PACKAGES += \
     nfc_nci.ivy
