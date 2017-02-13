@@ -74,6 +74,14 @@ persist.data.qmi.adb_logmask=0
 telephony.lteOnGsmDevice=1
 DEVICE_PROVISIONED=1
 
+# IMS
+persist.radio.calls.on.ims=1
+persist.radio.jbims=1
+persist.radio.ROTATION_ENABLE=1
+persist.radio.VT_ENABLE=1
+persist.radio.VT_HYBRID_ENABLE=1
+persist.radio.VT_USE_MDM_TIME=0
+
 # Sensors
 ro.qti.sensors.wu=true
 ro.qti.sensors.max_geomag_rotv=70
