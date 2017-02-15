@@ -30,6 +30,9 @@ vendor/lib64/libaudcal.so
 
 # Bluetooth
 etc/firmware/BCM43xx.hcd
+vendor/lib/libaptX-1.0.0-rel-Android21-ARMv7A.so
+vendor/lib/libaptXHD-1.0.0-rel-Android21-ARMv7A.so
+vendor/lib/libaptXScheduler.so
 
 # Camera
 bin/mm-qcamera-daemon
