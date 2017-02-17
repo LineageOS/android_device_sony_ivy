@@ -55,3 +55,46 @@ WIFI_BUS := PCIE
 
 # Inherit from the proprietary version
 -include vendor/sony/ivy/BoardConfigVendor.mk
+
+# TWRP
+VENDOR_PATH := vendor/sony/ivy
+VENDOR_COMMON_PATH := vendor/sony/kitakami-common
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/virtual/android_usb/android0/f_mass_storage/lun/file
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone12/temp
+PRODUCT_COPY_FILES += bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+TW_MAX_BRIGHTNESS := 1000
+TW_DEFAULT_BRIGHTNESS := 800
+TW_INCLUDE_FUSE_EXFAT := true
+TW_EXCLUDE_SUPERSU := true
+TW_HAS_NO_RECOVERY_PARTITION := true
+TW_NEW_ION_HEAP := true
+TW_TARGET_USES_QCOM_BSP := true
+TW_INCLUDE_CRYPTO := true
+TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/cryptfs_hw
+TW_CRYPTO_REAL_BLKDEV := "/dev/block/mmcblk0p42"
+TW_CRYPTO_MNT_POINT := "/data"
+TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,barrier=1,noauto_da_alloc,discard"
+TW_CRYPTO_FS_FLAGS := "0x00000406"
+TW_CRYPTO_KEY_LOC := "footer"
+
+# TWRP Qualcomm crypto blobs
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += ${VENDOR_PATH}/proprietary/bin/qseecomd
+PRODUCT_COPY_FILES += \
+   ${VENDOR_PATH}/proprietary/vendor/lib64/libQSEEComAPI.so:recovery/root/vendor/lib64/libQSEEComAPI.so \
+   ${VENDOR_PATH}/proprietary/vendor/lib64/libdrmfs.so:recovery/root/vendor/lib64/libdrmfs.so \
+   ${VENDOR_COMMON_PATH}/proprietary/vendor/lib64/libdiag.so:recovery/root/vendor/lib64/libdiag.so \
+   ${VENDOR_PATH}/proprietary/vendor/lib64/librpmb.so:recovery/root/vendor/lib64/librpmb.so \
+   ${VENDOR_PATH}/proprietary/vendor/lib64/libssd.so:recovery/root/vendor/lib64/libssd.so \
+   ${VENDOR_PATH}/proprietary/vendor/lib64/libsecureui.so:recovery/root/vendor/lib64/libsecureui.so \
+   ${VENDOR_PATH}/proprietary/vendor/lib64/lib-sec-disp.so:recovery/root/vendor/lib64/lib-sec-disp.so \
+   ${VENDOR_PATH}/proprietary/vendor/lib64/libStDrvInt.so:recovery/root/vendor/lib64/libStDrvInt.so \
+   ${VENDOR_PATH}/proprietary/vendor/lib64/libsecureui_svcsock.so:recovery/root/vendor/lib64/libsecureui_svcsock.so \
+   ${VENDOR_PATH}/proprietary/vendor/lib64/libdrmtime.so:recovery/root/vendor/lib64/libdrmtime.so \
+   ${VENDOR_COMMON_PATH}/proprietary/vendor/lib64/libtime_genoff.so:recovery/root/vendor/lib64/libtime_genoff.so \
+   ${VENDOR_COMMON_PATH}/proprietary/vendor/lib64/hw/keystore.msm8994.so:recovery/root/vendor/lib64/hw/keystore.msm8994.so \
+   ${VENDOR_COMMON_PATH}/proprietary/etc/firmware/cmnlib.mdt:recovery/root/lib/firmware/cmnlib.mdt \
+   ${VENDOR_COMMON_PATH}/proprietary/etc/firmware/cmnlib.b00:recovery/root/lib/firmware/cmnlib.b00 \
+   ${VENDOR_COMMON_PATH}/proprietary/etc/firmware/cmnlib.b01:recovery/root/lib/firmware/cmnlib.b01 \
+   ${VENDOR_COMMON_PATH}/proprietary/etc/firmware/cmnlib.b02:recovery/root/lib/firmware/cmnlib.b02 \
+   ${VENDOR_COMMON_PATH}/proprietary/etc/firmware/cmnlib.b03:recovery/root/lib/firmware/cmnlib.b03

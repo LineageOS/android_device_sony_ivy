@@ -1,0 +1,38 @@
+on early-init
+    chown system system /firmware
+    chown system system /firmware/image
+
+on init
+    export LD_LIBRARY_PATH .:/sbin:/vendor/lib64
+
+service sbinqseecomd /sbin/qseecomd
+    oneshot
+    disabled
+    user root
+    group root
+    seclabel u:r:recovery:s0
+
+on fs
+    chmod 0664 /dev/qseecom
+    chown system drmrpc /dev/qseecom
+    chmod 0664 /dev/ion
+    chown system system /dev/ion
+
+on property:ro.crypto.state=encrypted
+    start sbinqseecomd
+
+on boot
+    # Configure governor settings for little cluster
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
+
+    # Configure governor settings for big cluster
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "interactive"
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 1248000
+    
+    # for USB HOST
+    chown system system /sys/module/qpnp_smbcharger_extension/parameters/id_polling_timeout
+    chown system system /sys/module/qpnp_smbcharger_extension/parameters/start_id_polling
+    chmod 0660 /sys/module/qpnp_smbcharger_extension/parameters/id_polling_timeout
+    chmod 0660 /sys/module/qpnp_smbcharger_extension/parameters/start_id_polling
+    write /sys/module/qpnp_smbcharger_extension/parameters/id_polling_timeout 30000
+    write /sys/module/qpnp_smbcharger_extension/parameters/start_id_polling 1
