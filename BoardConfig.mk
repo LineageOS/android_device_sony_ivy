@@ -31,10 +31,6 @@ TARGET_KERNEL_CONFIG := kitakami_ivy_defconfig
 # Audio
 BOARD_HAVE_BCM_FM := true
 
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
-BOARD_CUSTOM_BT_CONFIG := $(DEVICE_PATH)/bluetooth/vnd_generic.txt
-
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_ivy
 
