@@ -55,20 +55,20 @@ static void import_kernel_nv(const std::string& key,
                 property_set("ro.telephony.default_network", "9,1");
                 property_set("ro.semc.product.model", "E6533");
                 property_set("ro.semc.product.name", "Xperia Z3+ Dual");
-                property_set("ro.product.model", "E6533");
-                property_set("ro.product.name", "ivy_dsds");
-                property_set("ro.product.device", "ivy_dsds");
-                property_set("ro.build.description", "ivy_dsds-user 7.1.1 N-MR1-KITAKAMI-170609-1025 1 dev-keys");
-                property_set("ro.build.fingerprint", "Sony/ivy_dsds/ivy_dsds:7.1.1/N-MR1-KITAKAMI-170609-1025/1:user/dev-keys");
+                property_override("ro.product.model", "E6533");
+                property_override("ro.product.name", "ivy_dsds");
+                property_override("ro.product.device", "ivy_dsds");
+                property_override("ro.build.description", "ivy_dsds-user 7.1.1 N-MR1-KITAKAMI-170609-1025 1 dev-keys");
+                property_override("ro.build.fingerprint", "Sony/ivy_dsds/ivy_dsds:7.1.1/N-MR1-KITAKAMI-170609-1025/1:user/dev-keys");
         } else {
                 property_set("ro.telephony.default_network", "9");
                 property_set("ro.semc.product.model", "E6553");
                 property_set("ro.semc.product.name", "Xperia Z3+");
-                property_set("ro.product.model", "E6553");
-                property_set("ro.product.name", "ivy");
-                property_set("ro.product.device", "ivy");
-                property_set("ro.build.description", "ivy-user 7.1.1 N-MR1-KITAKAMI-170609-1025 1 dev-keys");
-                property_set("ro.build.fingerprint", "Sony/ivy/ivy:7.1.1/N-MR1-KITAKAMI-170609-1025/1:user/dev-keys");
+                property_override("ro.product.model", "E6553");
+                property_override("ro.product.name", "ivy");
+                property_override("ro.product.device", "ivy");
+                property_override("ro.build.description", "ivy-user 7.1.1 N-MR1-KITAKAMI-170609-1025 1 dev-keys");
+                property_override("ro.build.fingerprint", "Sony/ivy/ivy:7.1.1/N-MR1-KITAKAMI-170609-1025/1:user/dev-keys");
         }
     }
 }
