@@ -683,7 +683,7 @@ vendor/lib/libmmcamera_ubifocus_lib.so
 bin/mlog_qmi_service
 bin/sct_service
 bin/taimport
-bin/tad_static|791b8b21184ba72d54368aeabdf093f9f7f9bafd
+bin/tad_static|09838bf6e1fbc19106b09f47b3f48963641faeed
 bin/ta_qmi_service
 bin/updatemiscta
 lib/libMiscTaAccessor.so
@@ -748,7 +748,6 @@ lib/libsuntory.so
 lib/libsuntory_utils.so
 lib64/lib-preload64.so|7c5582e9df7dfd98b70814b3792429b2d9a0231b
 lib64/lib_asb_tee.so
-lib64/lib_get_secure_mode.so
 lib64/libcredential-manager-service.so
 lib64/libdevice_security.so
 lib64/libplstorage.so
