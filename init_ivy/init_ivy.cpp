@@ -43,13 +43,13 @@ void property_override(char const prop[], char const value[])
 }
 
 static void import_kernel_nv(const std::string& key,
-        const std::string& value, bool for_emulator __attribute__((unused))) 
+        const std::string& value, bool for_emulator __attribute__((unused)))
 {
     if (key.empty()) return;
 
     if (key == "oemandroidboot.phoneid") {
 	//Dual Sim variant contains two IMEIs separated by comma.
-        if ((count(value.begin(), value.end(),',')) > 0) { 
+        if ((count(value.begin(), value.end(),',')) > 0) {
                 property_set("persist.multisim.config", "dsds");
                 property_set("persist.radio.multisim.config", "dsds");
                 property_set("ro.telephony.default_network", "9,1");
