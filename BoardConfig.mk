@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
-#               2017 The LineageOS Project
+#               2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,15 +28,12 @@ TARGET_OTA_ASSERT_DEVICE := E6533,E6553,ivy,ivy_dsds
 # Boot image/kernel
 TARGET_KERNEL_CONFIG := kitakami_ivy_defconfig
 
-# Audio
-BOARD_HAVE_BCM_FM := true
+# CM hardware
+BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_ivy
-
-# NFC
-NFC_NXP_CHIP_TYPE := PN547C2
-BOARD_NFC_CHIPSET := pn547
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
@@ -47,20 +44,13 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 5513412608
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 24763154432 # 24763170816-16384
 
-BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw
-TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
+# Radio
+BOARD_HAVE_RADIO := true
 
 # Wifi
-BOARD_WLAN_DEVICE           := bcmdhd
-BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-BOARD_HOSTAPD_DRIVER        := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
-WIFI_DRIVER_FW_PATH_AP      := "/system/etc/firmware/wlan/bcmdhd/fw_bcmdhd_apsta.bin"
-WIFI_DRIVER_FW_PATH_STA     := "/system/etc/firmware/wlan/bcmdhd/fw_bcmdhd.bin"
-WPA_SUPPLICANT_VERSION      := VER_0_8_X
 WIFI_BUS := PCIE
 
 # Inherit from the proprietary version
