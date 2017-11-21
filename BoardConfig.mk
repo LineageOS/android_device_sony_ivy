@@ -28,9 +28,6 @@ TARGET_OTA_ASSERT_DEVICE := E6533,E6553,ivy,ivy_dsds
 # Boot image/kernel
 TARGET_KERNEL_CONFIG := kitakami_ivy_defconfig
 
-# Audio
-BOARD_HAVE_BCM_FM := true
-
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_ivy
 
